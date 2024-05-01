@@ -1,0 +1,89 @@
+body {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #4285F4;
+    padding: 20px;
+    height: 210vh; /* Полная высота */
+}
+
+.content {
+    flex-grow: 1;
+    padding: 0 10px;
+    overflow: hidden;
+    background-color: #FFFFFF ;
+    color:#333;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #333;
+}
+
+.sidebar ul li a:hover {
+    background-color: #2E86C1 ;
+}
+
+
+video {
+    width: 50%; /* Ширина видео будет равна 100% ширины родительского элемента */
+    height: auto; /* Высота будет автоматически подстраиваться для сохранения пропорций */
+    display: block; /* Убираем возможные отступы вокруг видео */
+    margin: 0 auto; /* Центрируем видео по горизонтали */
+    max-width: 300px;
+}
+body {
+    background-color:#E0EBF5;; /* Фисташковый цвет */
+    margin: 0; /* Убираем отступы по умолчанию */
+    padding: 0; /* Убираем отступы по умолчанию */
+}
+.collapsible {
+    background-color: #FFFFFF;
+    color: black; /* Белый текст */
+            cursor: pointer;
+            padding: 10px;
+            width: 80%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s; /* Плавное изменение цвета при наведении */
+        
+}
+.collapsible + div {
+    display: none;
+}
+.active,
+.collapsible:hover {
+    background-color:#357AE8;
+}
+.pdf-button {
+    background-color: #FFFFFF; /* Зеленый */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.pdf-button:hover {
+    background-color: #45a049; /* Темно-зеленый (темнее) */
+}
