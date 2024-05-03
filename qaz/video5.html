@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Образовательный сайт физики</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* You can add more styles here to fit your design needs */
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <a href="/index.html">
+            <img src="DALL·E 2024-04-04 01.17.17 - Design a modern and educational logo for a physics website. The logo should combine elements of physics, like atoms, electrons, and wave patterns, wit.webp"
+                height="100" width="100" align="left"></a>
+        <h2>Мазмұны</h2>
+
+        <ul>
+            <li><button type="button" class="collapsible">Бейнесабақ <span>&#x1F3A5;</span></button>
+                <div class="content">
+                    <font size="2">
+                        <p><a href="/qaz/video1.html">№1 сабақ. Геометриялық оптика. Жарықтың түзусызықты таралу заңы.
+                            </a>
+                        </p>
+                        <p><a href="/qaz/video2.html">№2 сабақ. Жарықтың шағылуы. Шағылу заңдары. </a></p>
+                        <p><a href="/qaz/video3.html">№3 сабақ. Жарықтың сынуы. Жарықтың сыну заңдары. Толық ішкі
+                                шағылу. </a></p>
+                        <p><a href="/qaz/video4.html">№4 сабақ. Жазық айна. Сфералық айна. Сфералық айнаның көмегімен
+                                кескін алу.
+                            </a></p>
+                        <p><a href="/qaz/video5.html">№5 сабақ. Линзалар. Линзаның оптикалық күші. Жұқа линза</a></p>
+                        <p><a href="/qaz/video6.html">№6 сабақ. Оптикалық аспаптар. Көз – оптикалық жүйе. </a></p>
+                    </font>
+                </div>
+            </li>
+
+            <li><button type=" button" class="collapsible">Эксперименттер <span>&#x2692;</span></button>
+                <div class=" content">
+                    <font size="2">
+                        <p><a href="/qaz/experiment1.html">Қалам неге сынып тұр?</a></p>
+                        <p><a href="/qaz/experiment2.html">Неге айнада адам кескіні көп?</a></p>
+                        <p><a href="/qaz/experiment3.html">Тілшенің бағыты неге өзгерді?</a></p>
+
+                    </font>
+                </div>
+            </li>
+
+
+            <li><button type=" button" class="collapsible">«Геометриялық оптика» тарауы бойынша теориялар мен есептер
+                    жинағы<span>&#x1F4DD;</span></button>
+                <div class=" content">
+                    <font size="2">
+                        <a href="/qaz/сборник.pdf" class="pdf-button" download>Жүктеу</a>
+                    </font>
+                </div>
+            </li>
+            <li><button type=" button" class="collapsible">Мәнмәтіндік тапсырмалар <span>&#x1F4DD;</span></button>
+                <div class=" content">
+                    <font size="2">
+                        <a href="/qaz/контекст.pdf" class="pdf-button" download>Жүктеу</a>
+                    </font>
+                </div>
+            </li>
+            <li><button class="collapsible">Күрделілігі жоғары тапсырмалар <span>&#x1F4A1;</span></button>
+                <div class="content">
+                    <a href="/qaz/зад пов сложн.pdf" class="pdf-button" download>Жүктеу</a>
+                </div>
+            </li>
+            <li><button type=" button" class="collapsible">Бақылау тесті <span>&#x1F4DD;</span></button>
+                <div class=" content">
+                    <font size="2">
+                        <p><a href="test.html">Бақылау тесті</a></p>
+                    </font>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="content" margin-top="60">
+        <h1>Бейнесабақ 5</h1>
+
+        <h2>Бейнесабақ 5:Линзалар. Линзаның оптикалық күші. Жұқа линза</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Lr3tBRQNbxY?si=NkEl8Qq9gpJhqUzN"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
