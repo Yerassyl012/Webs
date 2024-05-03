@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Образовательный сайт физики</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #quiz {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin-bottom: 10px;
+        }
+
+        #score,
+        #answers {
+            display: none;
+        }
+
+        .correct-answer {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="/index.html">
+            <img src="DALL·E 2024-04-04 01.17.17 - Design a modern and educational logo for a physics website. The logo should combine elements of physics, like atoms, electrons, and wave patterns, wit.webp"
+                height="100" width="100" align="left"></a>
+        <h2>Содержание</h2>
+
+        <ul>
+            <li><button type="button" class="collapsible">Видеоуроки <span>&#x1F3A5;</span></button>
+                <div class="content">
+                    <font size="2">
+                        <p><a href="/rus/video1.html">№1 урок. Геометрическая оптика. Закон прямолинейного
+                                распространения света.
+                            </a>
+                        </p>
+                        <p><a href="/rus/video2.html">№2 урок. Отражение света. Законы отражения.</a></p>
+                        <p><a href="/rus/video3.html">№3 урок. Преломление света. Закон преломления света. Полное
+                                внутреннее отражение.
+                            </a></p>
+                        <p><a href="/rus/video4.html">№4 урок. Плоское зеркало. Сферическое зеркало. Полчуить
+                                изображение с помощью
+                                сферического зеркала.
+                            </a></p>
+                        <p><a href="/rus/video5.html">№5 урок. Линзы. Оптическая сила линзы. Тонкая линза.</a></p>
+                        <p><a href="/rus/video6.html">№6 урок. Оптические приборы. Глаз как оптическая система.</a></p>
+                    </font>
+                </div>
+            </li>
+
+            <li><button type=" button" class="collapsible">Эксперименты <span>&#x2692;</span></button>
+                <div class=" content">
+                    <font size="2">
+                        <p><a href="/rus/experiment1.html">Почему ручка сломана?</a></p>
+                        <p><a href="/rus/experiment2.html">Почему в зеркале так много изображении человека?</a></p>
+                        <p><a href="/rus/experiment3.html">Почему изменилось направление стрелки?</a></p>
+
+                    </font>
+                </div>
+            </li>
+
+
+            <li><button type=" button" class="collapsible">Сборник теории и задач по разделу «Геометрическая
+                    оптика»<span>&#x1F4DD;</span></button>
+                <div class=" content">
+                    <font size="2">
+                        <a href="/rus/сборник.pdf" class="pdf-button" download>Скачать</a>
+                    </font>
+                </div>
+            </li>
+            <li><button type=" button" class="collapsible">Контекстные задачи <span>&#x1F4DD;</span></button>
+                <div class=" content">
+                    <font size="2">
+                        <a href="/rus/контекст.pdf" class="pdf-button" download>Скачать</a>
+                    </font>
+                </div>
+            </li>
+            <li><button class="collapsible">Задачи повышенной сложности<span>&#x1F4A1;</span></button>
+                <div class="content">
+                    <a href="/rus/зад пов сложн.pdf пов сложн.pdf" class="pdf-button" download>Скачать</a>
+                </div>
+            </li>
+            <li><button type=" button" class="collapsible">Контрольный тест<span>&#x1F4DD;</span></button>
+                <div class=" content">
+                    <font size="2">
+                        <p><a href="/rus/test.html">Контрольный тест</a></p>
+                    </font>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="quiz">
+        <h1>Контрольный тест по геометрической оптики</h1>
+        <div class="question">
+            <p>1. Чем тепловые источники света отличаются от холодных?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q1" value="0"> Высокая температура</label></li>
+                <li><label><input type="radio" name="q1" value="1"> Температура в соответствии с комнатной
+                        температурой</label></li>
+                <li><label><input type="radio" name="q1" value="0"> Излучает синий свет</label>
+                </li>
+                <li><label><input type="radio" name="q1" value="0"> Не является точечным</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>2. При каких условиях происходит солнечное затмение?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q2" value="1"> При новолунии</label></li>
+                <li><label><input type="radio" name="q2" value="0"> при полнолунии</label></li>
+                <li><label><input type="radio" name="q2" value="0"> когда тень Земли падает на Луну</label>
+                </li>
+                <li><label><input type="radio" name="q2" value="0"> Все ответы верны </label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>3. Как называется линия, по которой распространяется свет?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q3" value="1"> луч света</label></li>
+                <li><label><input type="radio" name="q3" value="0"> источник света</label></li>
+                <li><label><input type="radio" name="q3" value="0"> пламя</label>
+                </li>
+                <li><label><input type="radio" name="q3" value="0"> точечный источник света</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>4. В солнечный день длина тени на Земле составляет 80 см от ели 1,5 м, а от березы – 8 м. какова высота
+                березы?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q4" value="0"> 150 м </label></li>
+                <li><label><input type="radio" name="q4" value="0"> 0,15 м</label></li>
+                <li><label><input type="radio" name="q4" value="0"> 1,5 см</label>
+                </li>
+                <li><label><input type="radio" name="q4" value="1"> 15 м</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>5. В солнечный день тень от дома на Земле имеет длину 35 м, а тень от вертикально стоящей палки высотой 1
+                м имеет длину 2 м. какова высота дома?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q5" value="0"> 15 м</label></li>
+                <li><label><input type="radio" name="q5" value="0"> 16,5 м</label></li>
+                <li><label><input type="radio" name="q5" value="1"> 17,5 м</label>
+                </li>
+                <li><label><input type="radio" name="q5" value="0"> 18 м</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>6. Угол падения луча равен 45° . Постройте угол отражения.</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q6" value="0"> 90&deg;</label></li>
+                <li><label><input type="radio" name="q6" value="1"> 45&deg;</label></li>
+                <li><label><input type="radio" name="q6" value="0"> 60&deg;</label>
+                </li>
+                <li><label><input type="radio" name="q6" value="0"> 30&deg;</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>7. Угол между плоскостью зеркала и отраженным лучом равен 60°. Постройте угол падения луча.</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q7" value="1"> 30&deg;</label></li>
+                <li><label><input type="radio" name="q7" value="0"> 60&deg;</label></li>
+                <li><label><input type="radio" name="q7" value="0"> 45&deg;</label>
+                </li>
+                <li><label><input type="radio" name="q7" value="0"> 90&deg;</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>На сколько изменится угол между падающим и отраженным лучами если угол падения уменьшится на 15°?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q8" value="0"> 30&deg; увеличивается</label></li>
+                <li><label><input type="radio" name="q8" value="0"> 15&deg; увеличивается</label></li>
+                <li><label><input type="radio" name="q8" value="1"> 30&deg; уменьшается</label>
+                </li>
+                <li><label><input type="radio" name="q8" value="0"> 15&deg; уменьшается</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>9. На рисунках должны быть обозначены углы падения светового луча. На каком из них это обозначение
+                сделано верно? </p>
+            <ul class="options">
+                <img src="image.png" width="400">
+                <li><label><input type="radio" name="q9" value="1"> &#8470;1</label></li>
+                <li><label><input type="radio" name="q9" value="0"> &#8470;2</label></li>
+                <li><label><input type="radio" name="q9" value="0"> &#8470;3</label>
+                </li>
+                <li><label><input type="radio" name="q9" value="0"> Дұрыс жауабы жоқ</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>10. Луч света падает на зеркало под углом 85° к его поверхности. Чему равен угол между падающим и
+                отраженным лучами? Чему равен угол отражения?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q10" value="1"> 10&deg; и 5&deg;</label></li>
+                <li><label><input type="radio" name="q10" value="0"> 20&deg; и 10&deg;</label></li>
+                <li><label><input type="radio" name="q10" value="0"> 5&deg; и 10&deg;</label>
+                </li>
+                <li><label><input type="radio" name="q10" value="0"> 10&deg; и 20&deg;</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>11. Луч света падает из стекла на поверхность воды под углом 40°. Определите угол преломления.</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q11" value="0"> 40&deg;</label></li>
+                <li><label><input type="radio" name="q11" value="0"> 80&deg;</label></li>
+                <li><label><input type="radio" name="q11" value="1"> 35&deg;</label>
+                </li>
+                <li><label><input type="radio" name="q11" value="0"> 60&deg;</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>12. На границу сред вода - стекло падает луч света под углом 40°. Oпpеделите угол преломления луча.</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q12" value="1"> 35&deg;</label></li>
+                <li><label><input type="radio" name="q12" value="0"> 45&deg;</label></li>
+                <li><label><input type="radio" name="q12" value="0"> 60&deg;</label>
+                </li>
+                <li><label><input type="radio" name="q12" value="0"> 90&deg;</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>13. Луч света падает на плоскую границу раздела двух сред. Угол падения равен 50°, угол между отраженным
+                лучом и преломленным 100°. Чему равен угол преломления?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q13" value="0"> 90&deg;</label></li>
+                <li><label><input type="radio" name="q13" value="0"> 60&deg;</label></li>
+                <li><label><input type="radio" name="q13" value="0"> 45&deg;</label>
+                </li>
+                <li><label><input type="radio" name="q13" value="1"> 30&deg;</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>14.Угол между отраженным и преломленным лучами 110°. Чему равна сумма углов падения и преломления?
+            <ul class="options">
+                <li><label><input type="radio" name="q14" value="0"> 60&deg;</label></li>
+                <li><label><input type="radio" name="q14" value="0"> 35&deg;</label></li>
+                <li><label><input type="radio" name="q14" value="1"> 70&deg;</label>
+                </li>
+                <li><label><input type="radio" name="q14" value="0"> 50&deg;</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>15. На оконное стекло падает луч света, образующий с плоскостью стекла угол 25°. Каким будет угол между
+                лучом, отраженным от стекла, и прошедшим сквозь стекло?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q15" value="1"> 84&deg;</label></li>
+                <li><label><input type="radio" name="q15" value="0"> 25&deg;</label></li>
+                <li><label><input type="radio" name="q15" value="0"> 50&deg;</label>
+                </li>
+                <li><label><input type="radio" name="q15" value="0"> 60&deg;</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>16. Количество изображений в зеркале,если угол между зеркалами 90°?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q16" value="1"> 3</label></li>
+                <li><label><input type="radio" name="q16" value="0"> 5</label></li>
+                <li><label><input type="radio" name="q16" value="0"> 7</label>
+                </li>
+                <li><label><input type="radio" name="q16" value="0"> 11</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>17. Количество изображений в зеркале,если угол между зеркалами 45°?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q17" value="0"> 3</label></li>
+                <li><label><input type="radio" name="q17" value="0"> 5</label></li>
+                <li><label><input type="radio" name="q17" value="1"> 7</label>
+                </li>
+                <li><label><input type="radio" name="q17" value="0"> 11</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>18. Формула сферического зеркала</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q18" value="1"> F = R/2</label></li>
+                <li><label><input type="radio" name="q18" value="0"> D = R/2</label></li>
+                <li><label><input type="radio" name="q18" value="0"> 1/F = 1/d + 1/f</label>
+                </li>
+                <li><label><input type="radio" name="q18" value="0"> D =
+                        (n<sub>21</sub>-1)(1/R<sub>2</sub>+1/R<sub>1</sub>)</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>19. Когда объект не дает изображения в вогнутом зеркале? </p>
+            <ul class="options">
+                <li><label><input type="radio" name="q19" value="0"> Объект расположено дальше от центра сферической
+                        поверхности</label></li>
+                <li><label><input type="radio" name="q19" value="0"> Объект находится в центре сферической
+                        поверхности</label>
+                </li>
+                <li><label><input type="radio" name="q19" value="0"> Объект расположен между центром сферической
+                        поверхности и фокусом F</label>
+                </li>
+                <li><label><input type="radio" name="q19" value="1"> Объект находится в фокусе F зеркала </label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>20. Каким будет изображение объекта в выпуклом зеркале?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q20" value="0"> действительное, перевернутое, размер изображения
+                        равен размеру тела</label></li>
+                <li><label><input type="radio" name="q20" value="0"> действительное, уменьшенное, перевернутое</label>
+                </li>
+                <li><label><input type="radio" name="q20" value="1"> мнимое, прямое, уменьшенное </label>
+                </li>
+                <li><label><input type="radio" name="q20" value="0"> мнимое, прямое, уменьшенное </label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>21. Высота предмета 2см. Чтобы получить изображение высотой 1 м, каким должно быть фокусное расстояние
+                линзы, находящегося на расстоянии 4 м от экрана?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q21" value="1"> 0,08м</label></li>
+                <li><label><input type="radio" name="q21" value="0"> 0,2м</label></li>
+                <li><label><input type="radio" name="q21" value="0"> 0,04м </label>
+                </li>
+                <li><label><input type="radio" name="q21" value="0"> 0,8м</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>22. Линзу с оптической силой 2,5 дптр поместили на расстоянии 0,5 м от ярко освещённого предмета. На
+                каком расстоянии следует поместить экран, чтобы увидеть на нём чёткое изображение предмета?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q22" value="0"> 4м</label></li>
+                <li><label><input type="radio" name="q22" value="0"> 6м </label></li>
+                <li><label><input type="radio" name="q22" value="1"> 2м </label>
+                </li>
+                <li><label><input type="radio" name="q22" value="0"> 8м </label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>23. Предмет высотой 3 см находится на расстоянии 40 см от собирающей тонкой линзы. Определите высоту
+                изображения, если оптическая сила линзы равна 4 диоптриям.</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q23" value="0"> 0,1м</label></li>
+                <li><label><input type="radio" name="q23" value="0"> 20см</label></li>
+                <li><label><input type="radio" name="q23" value="0"> 10м </label>
+                </li>
+                <li><label><input type="radio" name="q23" value="1"> 0,05м</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>24. Изображение предмета сформировалось на расстоянии 30 см от линзы. Известно, что оптическая сила этой
+                линзы равна 4 дптр. Найдите линейное увеличение.</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q24" value="0"> 20см</label></li>
+                <li><label><input type="radio" name="q24" value="1"> 0,2м</label></li>
+                <li><label><input type="radio" name="q24" value="0"> 35см </label>
+                </li>
+                <li><label><input type="radio" name="q24" value="0"> 0,4м</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>25. Формула тонкой линзы</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q25" value="0"> F = R/2</label></li>
+                <li><label><input type="radio" name="q25" value="0"> D = R/2</label></li>
+                <li><label><input type="radio" name="q25" value="1"> 1/F = 1/d + 1/f</label>
+                </li>
+                <li><label><input type="radio" name="q25" value="0"> D =
+                        (n<sub>21</sub>-1)(1/R<sub>2</sub>+1/R<sub>1</sub>)</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>26. Какой оптический прибор похож на человеческий глаз?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q26" value="0"> микроскоп</label></li>
+                <li><label><input type="radio" name="q26" value="1"> фотоаппарат</label></li>
+                <li><label><input type="radio" name="q26" value="0"> перископ </label>
+                </li>
+                <li><label><input type="radio" name="q26" value="0"> лупа</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>27. Ученик носит очки с оптической силой +2 дптр. Какое фокусное расстояние у очков?
+            </p>
+            <ul class="options">
+                <li><label><input type="radio" name="q27" value="1"> 0,5м</label></li>
+                <li><label><input type="radio" name="q27" value="0"> 1м</label></li>
+                <li><label><input type="radio" name="q27" value="0"> 1,2 м </label>
+                </li>
+                <li><label><input type="radio" name="q27" value="0"> 1,5 м</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>28. Какое изображение дает камера на картинке? </p>
+            <img src="image1.png" width="200">
+            <ul class="options">
+                <li><label><input type="radio" name="q28" value="1"> уменьшенный, действительный, перевернутый</label>
+                </li>
+                <li><label><input type="radio" name="q28" value="0"> прямой, увеличенный, мнимый</label></li>
+                <li><label><input type="radio" name="q28" value="0"> действительный, перевернутый, увеличенный</label>
+                </li>
+                <li><label><input type="radio" name="q28" value="0"> мнимый, прямой, уменьшенный</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>29. Врач предложил Арману носить очки с оптической силой -1 дптр. Какой дефект в глазах Армана?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q29" value="1"> близорукость</label></li>
+                <li><label><input type="radio" name="q29" value="0"> дальнозоркость</label></li>
+                <li><label><input type="radio" name="q29" value="0"> астигматизм </label>
+                </li>
+                <li><label><input type="radio" name="q29" value="0"> аккомодация</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <p>30.Какие проблемы с глазами устраняют очки со собирающей линзой?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q30" value="0"> близорукость</label></li>
+                <li><label><input type="radio" name="q30" value="1"> дальнозоркость</label></li>
+                <li><label><input type="radio" name="q30" value="0"> астигматизм </label>
+                </li>
+                <li><label><input type="radio" name="q30" value="0"> аккомодация</label></li>
+            </ul>
+        </div>
+        <button onclick="calculateScore()">Завершить тест</button>
+        <div id="score"></div>
+        <button onclick="showAnswers()">Показать правильные ответы</button>
+        <div id="answers"></div>
+    </div>
+
+
+    <script>
+        function calculateScore() {
+            var questions = document.querySelectorAll('.question');
+            var score = 0;
+            var correctAnswers = [];
+
+            questions.forEach(function (question, index) {
+                var selectedOption = question.querySelector('input[type="radio"]:checked');
+                if (selectedOption) {
+                    score += parseInt(selectedOption.value);
+                    correctAnswers.push({
+                        index: index + 1,
+                        correctIndex: parseInt(question.querySelector('input[type="radio"][value="1"]').name.substring(1))
+                    });
+                }
+            });
+
+            document.getElementById('score').innerText = 'Количество баллов: ' + score;
+            document.getElementById('score').style.display = 'block';
+            sessionStorage.setItem('score', score);
+            sessionStorage.setItem('correctAnswers', JSON.stringify(correctAnswers));
+        }
+
+        function showAnswers() {
+            var answers = JSON.parse(sessionStorage.getItem('correctAnswers'));
+            var answersHTML = '<p>Правильные ответы:</p>';
+
+            answers.forEach(function (answer) {
+                var options = document.getElementsByName('q' + answer.index);
+                answersHTML += '<p>Вопрос ' + answer.index + ': </p>';
+                options.forEach(function (option, index) {
+                    if (index + 1 === answer.correctIndex) {
+                        answersHTML += '<li class="correct-answer">' + option.parentElement.innerHTML + '</li>';
+                    } else {
+                        answersHTML += '<li>' + option.parentElement.innerHTML + '</li>';
+                    }
+                });
+            });
+
+            document.getElementById('answers').innerHTML = '<ul class="options">' + answersHTML + '</ul>';
+            document.getElementById('answers').style.display = 'block';
+            sessionStorage.setItem('showAnswers', true); // Сохранение флага для отображения ответов
+            window.location.href = 'test_otv.html'; // Переход на другую страницу для отображения ответов
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
